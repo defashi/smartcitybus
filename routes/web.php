@@ -18,7 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('busowner','BusOwnerController@index')->name('busowner');
+Route::prefix('busowner')->group(function(){
+	Route::get('/login','Auth\BusOwnerLoginController@showLoginForm')->name('busowner.login');
+	Route::post('/login','Auth\BusOwnerLoginController@login')->name('busowner.login.submit');
+	Route::get('/','BusOwnerController@index')->name('busowner');
+});
 
 Route::prefix('superadmin')->group(function(){
 	Route::get('/login','Auth\SuperAdminLoginController@showLoginForm')->name('superadmin.login');

@@ -28,4 +28,3 @@ class Busowner extends Authenticatable
         'password', 'remember_token',
     ];
 }
-1
