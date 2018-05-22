@@ -18,7 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-<<<<<<< HEAD
 Route::get('busowner','BusOwnerController@index')->name('busowner');
 
 Route::prefix('superadmin')->group(function(){
@@ -27,9 +26,4 @@ Route::prefix('superadmin')->group(function(){
 	Route::get('/','SuperAdminController@index')->name('superadmin.dashboard');
 });
 
-=======
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
->>>>>>> e7360d2661e5eee611ff094c76dec91001264906
