@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routes   
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('busowner','BusOwnerController@index')->name('busowner');
+
+Route::prefix('superadmin')->group(function(){
+	Route::get('/login','Auth\SuperAdminLoginController@showLoginForm')->name('superadmin.login');
+	Route::post('/login','Auth\SuperAdminLoginController@login')->name('superadmin.login.submit');
+	Route::get('/','SuperAdminController@index')->name('superadmin.dashboard');
+});
+

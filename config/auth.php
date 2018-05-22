@@ -45,6 +45,26 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        'superadmins' => [
+            'driver' => 'session',
+            'provider' => 'superadmins',
+        ],
+
+        'superadmin-api' => [
+            'driver' => 'token',
+            'provider' => 'superadmins',
+        ],
+
+        'busowners' => [
+            'driver' => 'session',
+            'provider' => 'busowners',
+        ],
+
+        'busowners-api' => [
+            'driver' => 'token',
+            'provider' => 'busowners',
+        ],
     ],
 
     /*
@@ -68,6 +88,16 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'superadmins' => [
+            'driver' => 'eloquent',
+            'model' => App\Superadmin::class,
+        ],
+
+        'busowners' => [
+            'driver' => 'eloquent',
+            'model' => App\Busowner::class,
         ],
 
         // 'users' => [
@@ -96,6 +126,18 @@ return [
             'provider' => 'users',
             'table' => 'password_resets',
             'expire' => 60,
+        ],
+
+        'superadmins' => [
+            'provider' => 'superadmins',
+            'table' => 'password_resets',
+            'expire' => 15,
+        ],
+
+        'minadmins' => [
+            'provider' => 'minadmins',
+            'table' => 'password_resets',
+            'expire' => 15,
         ],
     ],
 
