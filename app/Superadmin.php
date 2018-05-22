@@ -28,4 +28,3 @@ class Superadmin extends Authenticatable
         'password', 'remember_token',
     ];
 }
-1
