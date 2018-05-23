@@ -55,9 +55,9 @@
                <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Super Admin</a></li>
+                  <li><a href="{{ route('superadmin.dashboard') }}">Super Admin</a></li>
                   <li><a href="{{ route('login')}}">Admin</a></li>
-                  <li><a href="#">Bus Owner</a></li>
+                  <li><a href="{{ route('busowner') }}">Bus Owner</a></li>
                 </ul>
               </li>
               
