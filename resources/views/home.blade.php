@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.appp')
 
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Admin Dashboard</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    You are logged in as admin you can navigate to register user or bus owner
                 </div>
             </div>
         </div>

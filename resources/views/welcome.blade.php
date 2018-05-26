@@ -33,7 +33,7 @@
     <![endif]-->
   </head>
 
-  <body style="background-image: url('img/one.png');">
+  <body style="background-image: url('img/background_image.png');  background-repeat:no-repeat; opacity: 359 ">
 
     <div class="container">
       <!-- Static navbar -->
@@ -46,7 +46,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">SmartCityBus</a>
+            <a class="navbar-brand" href="{{ action('PagesController@welcome') }}">SmartCityBus</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
            
@@ -71,7 +71,7 @@
         <h1 style="text-align: center;">Welcome To SmartCityBus</h1>
         <p>SmartBusCity is the system that allows a bus boarder with RFID card to swipe the RFID card in proximity with RFID card reader for trip payment in a particular city bus as well as being able to recharge his or her account with a mobile money service.</p>
         <p>
-          <a class="btn btn-lg btn-primary" href="#" role="button">About SmartCityBus &raquo;</a>
+          <a class="btn btn-lg btn-primary" href="{{ action('PagesController@about') }}" role="button">About SmartCityBus &raquo;</a>
         </p>
       </div>
 
