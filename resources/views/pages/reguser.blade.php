@@ -43,6 +43,8 @@
       <div class="col-lg-6">
         <select class="form-control" name="category" id="select">
           <option></option>  
+
+       
           <option>Student</option>
           <option>Normal</option>
         </select>
