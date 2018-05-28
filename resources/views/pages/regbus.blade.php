@@ -16,7 +16,7 @@
           </div>
         @endif
   <fieldset>
-    <legend>Bus Registration Page</legend>
+    <legend>Admin Bus Registration Page</legend>
 
       <div class="form-group">
       <label for="inputplateNO" class="col-lg-2 control-label">PlateNo</label>
@@ -37,8 +37,6 @@
       </div>
     </div>
  
-
-   
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="submit" class="btn btn-primary">Submit</button>
