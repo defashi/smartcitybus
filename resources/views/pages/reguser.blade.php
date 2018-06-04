@@ -2,7 +2,7 @@
 
  @section('content')
  <div class="container">
-     <form class="form-horizontal" method="POST" action="{{ action('PagesController@register') }}">
+     <form class="form-horizontal" method="POST" action="{{ action('PagesController@registering') }}">
         {{csrf_field()}}
         @if(count($errors) > 0)
              @foreach($errors->all() as $error)

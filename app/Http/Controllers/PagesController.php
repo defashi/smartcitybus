@@ -16,7 +16,7 @@ class PagesController extends Controller
     	return view('welcome');
     }
 
-      public function register(Request $request){
+      public function registering(Request $request){
       	$this->validate($request, [
                'name' => 'required',
                'surname' => 'required',
