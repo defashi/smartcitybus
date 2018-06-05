@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Reguser;
-use App\Regbus;
+use App\reguser;
+use App\regbus;
 
 class PagesController extends Controller
 {
@@ -15,7 +15,7 @@ class PagesController extends Controller
     	return view('welcome');
     }
 
-      public function register(Request $request){
+      public function registering(Request $request){
       	$this->validate($request, [
                'name' => 'required',
                'surname' => 'required',
@@ -23,7 +23,7 @@ class PagesController extends Controller
                'category' => 'required',
                'gender' => 'required'
       	]);
-      $reguser = new Reguser;
+      $reguser = new reguser;
       $reguser->name = $request->input('name');
       $reguser->surname = $request->input('surname');
       $reguser->amount = $request->input('amount');
@@ -39,7 +39,7 @@ class PagesController extends Controller
                'platenumber' => 'required',
                'busowner' => 'required'
       	]);
-      $regbus = new Regbus;
+      $regbus = new regbus;
       $regbus->platenumber = $request->input('platenumber');
       $regbus->busowner = $request->input('busowner');
       $regbus->save();
