@@ -17,6 +17,7 @@ class CreateRegbusesTable extends Migration
             $table->increments('id');
              $table->string('platenumber');
             $table->string('busowner');
+            $table->string('carroute');
             $table->timestamps();
         });
     }

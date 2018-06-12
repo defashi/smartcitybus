@@ -16,7 +16,7 @@
           </div>
         @endif
   <fieldset>
-    <legend>Admin User Registration Page</legend>
+    <legend>Admin Customer Registration Page</legend>
     <div class="form-group">
       <label for="inputName" class="col-lg-2 control-label">Name</label>
       <div class="col-lg-6">

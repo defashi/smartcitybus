@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\reguser;
 use App\regbus;
-
+use DB;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 class PagesController extends Controller
 {
     public function about(){
@@ -37,11 +39,13 @@ class PagesController extends Controller
     public function register1(Request $request){
       	$this->validate($request, [
                'platenumber' => 'required',
-               'busowner' => 'required'
+               'busowner' => 'required',
+               'carroute' => 'required'
       	]);
       $regbus = new regbus;
       $regbus->platenumber = $request->input('platenumber');
       $regbus->busowner = $request->input('busowner');
+      $regbus->carroute = $request->input('carroute');
       $regbus->save();
       return redirect('/regbus')->with('response', 'Bus Registered Successfully');	 
     }
@@ -52,5 +56,11 @@ class PagesController extends Controller
 
      public function reguser(){
     	return view('pages.reguser');
+    }
+
+     public function viewroute(){
+      $makumbushos = DB::select('SELECT * FROM regbuses WHERE carroute="Simu200 to Makumbusho"');
+      $buses = DB::select('SELECT * FROM regbuses WHERE carroute="Tegeta to Kariakoo"');
+      return view('pages.viewroute',['buses'=>$buses],['makumbushos'=>$makumbushos]);
     }
 }

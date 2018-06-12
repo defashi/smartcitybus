@@ -43,8 +43,9 @@
 
                              
             <ul class="nav navbar-nav">
-                <li ><a href="{{ action('PagesController@reguser') }}">Register User</a></li>
+                <li ><a href="{{ action('PagesController@reguser') }}">Register Customer</a></li>
                 <li ><a href="{{ action('PagesController@regbus') }}">Register Bus</a></li>
+                <li ><a href="{{ action('PagesController@viewroute') }}">Route Buses</a></li>
             </ul>
        
 

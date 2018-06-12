@@ -37,6 +37,17 @@
       </div>
     </div>
  
+     <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Bus Route</label>
+      <div class="col-lg-6">
+        <select class="form-control" name="carroute" id="select">
+          <option></option>  
+          <option>Simu200 to Makumbusho</option>
+          <option>Tegeta to Kariakoo</option>
+        </select>
+      </div>
+    </div>
+
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="submit" class="btn btn-primary">Submit</button>

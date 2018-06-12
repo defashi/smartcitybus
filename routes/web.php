@@ -34,6 +34,7 @@ Route::get('/about','PagesController@about');
 Route::get('/welcome','PagesController@welcome');
 Route::get('/reguser','PagesController@reguser');
 Route::get('/regbus','PagesController@regbus');
+Route::get('/viewroute','PagesController@viewroute');
 Route::post('/registering','PagesController@registering');
 Route::post('/register1','PagesController@register1');
 
