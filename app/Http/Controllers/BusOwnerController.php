@@ -1,9 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-
 class BusOwnerController extends Controller
 {
     /**
@@ -23,6 +20,7 @@ class BusOwnerController extends Controller
      */
     public function index()
     {
-        return view('busowner');
+        
+        return view('busowner']);
     }
 }

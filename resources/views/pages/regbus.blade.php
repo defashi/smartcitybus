@@ -29,10 +29,13 @@
       <label for="select" class="col-lg-2 control-label">Bus owner</label>
       <div class="col-lg-6">
         <select class="form-control" name="busowner" id="select">
-          <option></option>  
-          <option>david</option>
-          <option>walter</option>
-          <option>Agustino</option>
+          <option></option>
+           @foreach ($owners as $owner)
+<option>
+{{ $owner->name }}
+</option>
+@endforeach
+</option>
         </select>
       </div>
     </div>

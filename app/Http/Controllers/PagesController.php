@@ -51,7 +51,8 @@ class PagesController extends Controller
     }
 
      public function regbus(){
-    	return view('pages.regbus');
+       $owners = DB::select('SELECT name FROM busowners');
+    	return view('pages.regbus',['owners'=>$owners]);
     }
 
      public function reguser(){
