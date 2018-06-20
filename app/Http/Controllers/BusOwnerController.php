@@ -21,6 +21,6 @@ class BusOwnerController extends Controller
     public function index()
     {
         
-        return view('busowner']);
+        return view('busowner');
     }
 }

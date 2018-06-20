@@ -64,4 +64,10 @@ class PagesController extends Controller
       $buses = DB::select('SELECT * FROM regbuses WHERE carroute="Tegeta to Kariakoo"');
       return view('pages.viewroute',['buses'=>$buses],['makumbushos'=>$makumbushos]);
     }
+
+      public function viewamount(){
+        $amounts = DB::select('SELECT * FROM regusers');
+        $schools = DB::table("regusers")->sum('amount');
+      return view('pages.viewamount',['schools'=>$schools],['amounts'=>$amounts]);
+    }
 }
